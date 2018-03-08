@@ -1,13 +1,50 @@
+
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 Live Training
 =============
 
-This is an empty repo for [Jared Lander's](https://www.jaredlander.com) Advanced Live Training.
+This is an empty repo for [Jared Lander's](https://www.jaredlander.com) [Live Training](https://www.safaribooksonline.com/live-training/courses/medium-r-programming-beyond-the-basics/0636920158622/). This is meant for people familiar with the content in the [Beginner Course](https://www.safaribooksonline.com/live-training/courses/beginning-r-programming/0636920144847/).
+
+Packages
+========
+
+To get started run the following code to install the latest version of the necessary packages.
+
+``` r
+packages <- c('coefplot','DBI', 'dbplyr', 'doParallel', 'foreach', 
+              'ggthemes', 'jsonlite', 'leaflet', 'odbc', 'rmarkdown', 
+              'rprojroot', 'RSQLite', 'rvest', 'tidyverse', 'threejs', 
+              'usethis', 'UsingR', 'XML', 'xml2')
+install.packages(packages)
+```
+
+Project Structure
+=================
+
+Making use of RStudio projects greatly improves the user experience. To facilitate this users should run the following code which will recreate this package on their computer. Be sure to select the positive prompts such as `yes`, `yeah`, etc.
+
+``` r
+newProject <- usethis::use_course('https://github.com/jaredlander/LiveFebruary2018/archive/master.zip')
+```
+
+After that runs successfully you will have a new folder holding the R project that looks like this.
+
+<img src="images/ProjectFolder.png" width="1036" />
+
+Either double-click the file called LiveFebruary2018.Rproj or run the following line of code.
+
+``` r
+rstudioapi::openProject(newProject)
+```
+
+After running this code, or double-clicking that file, you will be in an RStudio Project called LiveFebruary2018. You can see this in the top right of RStudio.
+
+<img src="images/ProjectCorner.png" width="197" />
 
 Clone this Repo
-===============
+---------------
 
-If you use git please clone this repo then open it as an [RStudio Project](https://support.rstudio.com/hc/en-us/articles/200526207-Using-Projects).
+Alternatively, if you use git then please clone this repo then open it as an [RStudio Project](https://support.rstudio.com/hc/en-us/articles/200526207-Using-Projects).
 
 ``` sh
 # if using SSH
@@ -17,29 +54,11 @@ git clone git@github.com:jaredlander/LiveMarch2018.git
 git clone https://github.com/jaredlander/LiveMarch2018.git
 ```
 
-If you don't use git, then please recreate this folder structure, and download `prep/DownloadData.r`, into the folder and open the `LiveMarch2018.Rproj` file using RStudio.
-
-Packages
-========
-
-To get started run the following code to install the latest version of the necessary packages.
-
-``` r
-packages <- c('coefplot', 'data.world', 'DBI', 'doParallel', 'foreach', 
-              'ggthemes', 'jsonlite', 'rprojroot', 'RSQLite', 'tidyverse', 
-              'UsingR')
-install.packages(packages)
-```
-
 Data
 ====
 
-Data for the class is kept at [data.world](https://data.world/landeranalytics/training).
-
-They can be downloaded automatically using the following code. This script requires that you are using an [RStudio Project](https://support.rstudio.com/hc/en-us/articles/200526207-Using-Projects).
+Data for the class is kept at [data.world](https://data.world/landeranalytics/training). You can sign up for a free account or run the following code. This requires that you are using an [RStudio Project](https://support.rstudio.com/hc/en-us/articles/200526207-Using-Projects) setup exactly like this repo, which is done if you followed the preceding code.
 
 ``` r
 source('prep/DownloadData.r')
 ```
-
-If you would like to download them manually you can create a free account at \[data.world\](<https://www.data.wold>\].
