@@ -2,7 +2,15 @@
 title: "My First Markdown Document"
 author: "Jared P. Lander"
 date: "March 8, 2018"
-output: html_document
+output:
+  html_document:
+    number_sections: yes
+    toc: yes
+    toc_float:
+      collapsed: no
+      smooth_scroll: yes
+  pdf_document:
+    toc: yes
 ---
 
 # First Section
@@ -79,3 +87,34 @@ ___This will be emphasized and strong___
 # Links
 
 [Link to my website](http://www.jaredlander.com)
+
+# R Time!!!!!
+
+```{r addition}
+1 + 1
+```
+
+```{r variables}
+x <- 3
+x
+```
+
+```{r multiplication}
+x*2
+```
+
+# Plots
+
+```{r histogram, fig.cap='A histogram of diamond prices',fig.align='center'}
+library(ggplot2)
+
+ggplot(diamonds, aes(x=price)) + geom_histogram()
+```
+
+Now we see just the image, no code.
+
+```{r histogram-carat, fig.cap='A histogram of carat', fig.align='center', echo=FALSE,warning=FALSE,message=FALSE}
+ggplot(diamonds, aes(x=carat)) + geom_histogram()
+```
+
+
