@@ -37,7 +37,7 @@ install.packages(packages)
 Making use of RStudio projects greatly improves the user experience. To facilitate this users should run the following code which will recreate this package on their computer. Be sure to select the positive prompts such as `yes`, `yeah`, etc.
 
 ```{r download-project,eval=FALSE}
-newProject <- usethis::use_course('https://github.com/jaredlander/LiveFebruary2018/archive/master.zip')
+newProject <- usethis::use_course('https://github.com/jaredlander/LiveMarch2018/archive/master.zip')
 ```
 
 After that runs successfully you will have a new folder holding the R project that looks like this.
