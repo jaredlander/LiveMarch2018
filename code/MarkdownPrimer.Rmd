@@ -4,3 +4,78 @@ author: "Jared P. Lander"
 date: "March 8, 2018"
 output: html_document
 ---
+
+# First Section
+
+We just created our first section in this document. Spacing is important in markdown, so we left a blank line after the hash tag. Adding a third sentence to comply with antiquated rules of grammar.
+
+We created a new paragraph by leaving a blank line between text. This further shows how important spacing is in markdown.
+
+# Second Section
+
+To create a new section, simply start a new section with a hashtag. There is no need to close the old section.
+
+# Let's Talk About Subsections
+
+To create a subsection, use two hashtags.
+
+## First Subsection
+
+We now have a subsection in the enclosing section.
+
+## Second Subsection
+
+Just like with sections, we do not close a subsection, we just create a new one with two hashtags.
+
+# Back to Sections
+
+We create a new section, without closing the subsection, with a single hashtag just like before.
+
+# Lists
+
+## Unordered Lists
+
+- Apples
+- Bananas
+- Oranges
+- Kiwis
+
+## Ordered Lists
+
+1. New York
+1. New Jersey
+1. Detroit
+1. Naples
+1. Philadelphia
+1. Rome
+
+a. Coal
+a. Wood
+a. Gas
+
+1. New York
+    1. Coal
+    1. Wood
+    1. Gas
+1. New Jersey
+    1. Gas
+1. Detroit
+    1. Gas
+1. Naples
+    1. Wood
+1. Philadelphia
+1. Rome
+
+# Formatting
+
+_Emphasized Text_
+
+__This will be strong text__
+
+___This will be emphasized and strong___
+
+`this is code`
+
+# Links
+
+[Link to my website](http://www.jaredlander.com)
