@@ -1,0 +1,6 @@
+---
+title: "My First Markdown Document"
+author: "Jared P. Lander"
+date: "March 8, 2018"
+output: html_document
+---
