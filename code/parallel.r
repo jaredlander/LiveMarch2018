@@ -50,3 +50,30 @@ parLapply(cl=cl, theList, fun=sum)
 # install.packages('devtools')
 # devtools::install_github('hadley/multidplyr')
 
+library(dplyr)
+library(multidplyr)
+
+data(diamonds, package='ggplot2')
+
+diamonds %>% 
+    group_by(cut) %>% 
+    summarize(Price=mean(price))
+
+diamonds %>% 
+    partition(cut) %>% 
+    summarize(Price=mean(price))
+
+models <- diamonds %>% 
+    partition(cut) %>% 
+    do(Model=lm(price ~ carat, data=.)) %>% 
+    collect()
+
+models
+
+models$Model[[1]]
+
+library(coefplot)
+coefplot(models$Model[[1]])
+multiplot(models$Model)
+
+stopCluster(cl)
