@@ -14,3 +14,13 @@ pizza$Details[[1]]
 pizza <- fromJSON('data/FavoriteSpots.json') %>% tidyr::unnest()
 pizza
 pizza$Zip
+
+library(leaflet)
+
+leaflet(pizza) %>% 
+    addTiles() %>% 
+    addMarkers(
+        lng= ~ longitude,
+        lat= ~ latitude,
+        popup= ~ Name
+    )

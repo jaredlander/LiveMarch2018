@@ -42,3 +42,5 @@ addLengths(theList[[2]], secondList[[2]])
 
 map2(theList, secondList, addLengths)
 map2_dbl(theList, secondList, addLengths)
+
+theList %>% map2_dbl(secondList, addLengths)
