@@ -41,3 +41,12 @@ foreach(a=theList, .packages=c('dplyr', 'purrr')) %dopar%
 {
     sum(a)
 }
+
+map(theList, sum)
+lapply(theList, FUN=sum)
+
+parLapply(cl=cl, theList, fun=sum)
+
+# install.packages('devtools')
+# devtools::install_github('hadley/multidplyr')
+
