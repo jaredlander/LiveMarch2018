@@ -23,6 +23,11 @@ download.file(
     'https://query.data.world/s/033kPeDH9pMdcnhPRIOwhjrw3lpA10',
     destfile=file.path(dataDir, 'FavoriteSpots.json'))
 
+# flightPaths.csv
+download.file(
+    'https://query.data.world/s/IIwWxfh9cTydB8h_OueRyA7yxvZ6bf',
+    destfile=file.path(dataDir, 'flightPaths.csv'))
+
 # reaction.txt
 download.file(
     'https://query.data.world/s/uDfiLMRxSiB_kQQhEt_LbDGVOcStBR',
@@ -42,6 +47,11 @@ download.file(
 download.file(
     'https://query.data.world/s/o_LrhM_oY5dexXVDbsMNxF2JyyIMrg',
     destfile=file.path(dataDir, 'TomatoFirst.csv'))
+
+# visited.csv
+download.file(
+    'https://query.data.world/s/GCIO0yVrO50N130s_CZNK50ujmqrE3',
+    destfile=file.path(dataDir, 'visited.csv'))
 
 # manhattan_Train.csv
 download.file(
